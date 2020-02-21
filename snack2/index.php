@@ -3,6 +3,7 @@
   $nome = $_GET["nome"];
   $email = $_GET["mail"];
   $eta = $_GET["eta"];
+  echo $response = filter_var($get_mail, FILTER_VALIDATE_EMAIL);
   if ((empty($nome)) || (empty($email))|| (empty($eta))) {
     $messaggio = "errore";
   }
@@ -18,6 +19,7 @@
   else {
     $messaggio = "accesso riuscito";
   }
+
   // if ((strlen($nome > 3) && (strpos($email,"@") && ($eta)) {
   //   $messaggio = "il tuo nome e lungo"
   // }
