@@ -1,0 +1,2 @@
+<?php
+$nino = random ?>
