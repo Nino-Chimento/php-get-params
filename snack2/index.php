@@ -6,13 +6,13 @@
   if ((empty($nome)) || (empty($email))|| (empty($eta))) {
     $messaggio = "errore";
   }
-  elseif (strlen($nome <= 3)) {
+  elseif (strlen($nome >= 3)) {
     $messaggio ="il nome e troppo corto";
   }
   elseif (!strpos($email,"@") && !strpos($email,".")) {
     $messaggio = "email non valida";
   }
-  elseif (is_numeric($eta)) {
+  elseif (!is_numeric($eta)) {
     $messaggio = " non hai inserito un numero in eta";
   }
   else {
